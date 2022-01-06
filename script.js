@@ -7,3 +7,9 @@ var currentTime = moment().startOf('d').add(10, 'h');
 console.log(currentTime);
 var currentHour = moment().format('H');
 console.log(currentHour);
+
+//making the timeblocks for the day
+//if statement for timeblocks
+if(){
+    
+}
