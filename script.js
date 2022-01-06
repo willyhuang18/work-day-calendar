@@ -9,7 +9,10 @@ var currentHour = moment().format('H');
 console.log(currentHour);
 
 //making the timeblocks for the day
-//if statement for timeblocks
-if(){
-    
+for (var i = 10; i < 24; i++) {
+    var timeSlot = currentTime.add(1, "hour").format("HH:mm A");
+    //give a temp variable for indicate future use
+    var temp;
 }
+//if statement for timeblocks
+console.log(timeSlot);
