@@ -25,9 +25,10 @@ for (var i = 8; i < 19; i++) {
 //had talked to the tutor, turn out with this:
         //giving the time content into the box
     //create a div with the row fill in the contents and append it
-    var row =`<div class="row" id='hour'>
-        <div id ="hour-${i}" class="hour w-25 p-4 col-1">${timeSlot}</div>
-        <textarea class="description text-danger w-50 p-4 col-6 ${state} hour"></textarea>
+    //need to indicate the hour in the div that display the hour
+    var row =`<div class="row" id ="hour-${i}">
+        <div class="hour w-25 p-4 col-1">${timeSlot}</div>
+        <textarea class="description text-danger w-50 p-4 col-6 ${state} hour-${i}"></textarea>
         <button class="saveBtn w-25 p-4 col-1 fas fa-save fa-2x"></button>
     </div>`
 $(".container").append(row);
