@@ -23,3 +23,5 @@ for (var i = 8; i < 24; i++) {
         state.classList.add("activePast")
     }
 }
+//giving the time content into the box
+$("#timeSlot").text(timeSlot);
