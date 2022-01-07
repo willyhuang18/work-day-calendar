@@ -43,5 +43,7 @@ $(".saveBtn").on("click", function(){
 });
 
 //need the do localStorage to get item, because the website didn't save the content
-var container = JSON.parse(localStorage.getItem(time, context));
-console.log(container);
+//had work with classmate, come out: use the for loop to get every hour's context that user write from local storage.
+for (var i = 8; i < 19; i++) {
+    $(`#hour-${i}`).val(localStorage.getItem(`hour-${i}`));
+  }
