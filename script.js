@@ -37,7 +37,11 @@ $(".container").append(row);
 //create an EventListener to save the data into localStorage
 $(".saveBtn").on("click", function(){
     //giving the variable to contain the textarea's context by getting out from the html, use DOM
-    var context =$(this).siblings(".description");
-    var time = $(this).siblings("id");
+    var context =$(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
     localStorage.setItem(time, context);
-})
+});
+
+//need the do localStorage to get item, because the website didn't save the content
+var container = JSON.parse(localStorage.getItem(time, context));
+console.log(container);
