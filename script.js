@@ -3,7 +3,7 @@ var now = moment();
 //making the text to disolay in the website
 $("#currentDay").text(now.format("dddd MMMM DD, YYYY"));
 // set to 12:00 am today
-var currentTime = moment().startOf('day').add(3, 'hour');
+var currentTime = moment().startOf('day').add(7, 'hour');
 console.log(currentTime);
 var currentHour = moment().format('H');
 console.log(currentHour);
@@ -22,6 +22,7 @@ for (var i = 8; i < 24; i++) {
     }else if(currentHour < i){
         state.classList.add("activePast")
     }
+$("#timeSlot").text(timeSlot);
+
 }
 //giving the time content into the box
-$("#timeSlot").text(timeSlot);
