@@ -11,7 +11,7 @@ console.log(currentHour);
 var state = document.querySelector(".state")
 
 //making the timeblocks for the day
-for (var i = 8; i < 24; i++) {
+for (var i = 8; i < 19; i++) {
     var timeSlot = currentTime.add(1, "hour").format("HH:mm A");
     //give a temp variable for indicate future use
 //if statement for timeblocks
@@ -22,7 +22,14 @@ for (var i = 8; i < 24; i++) {
     }else if(currentHour < i){
         state.classList.add("activePast")
     }
-$("#timeSlot").text(timeSlot);
+//had talked to the tutor, turn out with this:
+    //create a div with the row fill in the contents and append it
+    var row =`<div class="row" id='hour'>
+        <div id ="hour-${i}" class="hour w-25 p-4 col-1">${timeSlot}</div>
+        <textarea class="description w-50 p-4 col-6 ${state} hour"></textarea>
+        <button class="saveBtn w-25 p-4 col-1 fas fa-save fa-2x"></button>
+    </div>`
+$(".container").append(row);
 
 }
 //giving the time content into the box
