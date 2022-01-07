@@ -35,6 +35,9 @@ $(".container").append(row);
 }
 
 //create an EventListener to save the data into localStorage
-$(".saveBtn").addEventListener("click", function(){
-    console.log("hello");
+$(".saveBtn").on("click", function(){
+    //giving the variable to contain the textarea's context by getting out from the html, use DOM
+    var context =$(this).siblings(".description");
+    var time = $(this).siblings("id");
+    localStorage.setItem(time, context);
 })
