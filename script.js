@@ -16,20 +16,25 @@ for (var i = 8; i < 19; i++) {
     //give a temp variable for indicate future use
 //if statement for timeblocks
     if(currentHour == i){
-        state.classList.add("activePresent")
+        state = "activePresent ";
     }else if(currentHour > i){
-        state.classList.add("activeFuture")
+        state ="activeFuture";
     }else if(currentHour < i){
-        state.classList.add("activePast")
+        state ="activePast";
     }
 //had talked to the tutor, turn out with this:
+        //giving the time content into the box
     //create a div with the row fill in the contents and append it
     var row =`<div class="row" id='hour'>
         <div id ="hour-${i}" class="hour w-25 p-4 col-1">${timeSlot}</div>
-        <textarea class="description w-50 p-4 col-6 ${state} hour"></textarea>
+        <textarea class="description text-danger w-50 p-4 col-6 ${state} hour"></textarea>
         <button class="saveBtn w-25 p-4 col-1 fas fa-save fa-2x"></button>
     </div>`
 $(".container").append(row);
 
 }
-//giving the time content into the box
+
+//create an EventListener to save the data into localStorage
+$(".saveBtn").addEventListener("click", function(){
+    console.log("hello");
+})
